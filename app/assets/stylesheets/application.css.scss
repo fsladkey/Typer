@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ $lighttan: #E8DDCB;
+ $darktan: #CDB380;
+ $greenblue: #036564;
+ $blue: #033649;
+ $darkblue: #031634;
+
+ * {
+   padding: 0;
+   border: 0;
+   margin: 0;
+   text-decoration: none;
+   background: transparent;
+   color: inherit;
+ }
+
+ul {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  margin: 5px;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
+
+button {
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: $greenblue;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  background-color: $darktan;
+  color: $darkblue;
+}
+
+main {
+  max-width: 1200px;
+  padding: 10px 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.file-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  li {
+    background-color: $lighttan;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 350px;
+    margin: 5px;
+    text-align: left;
+    h4 {
+      margin-bottom: 5px;
+    }
+    a {
+      display: block;
+    }
+    pre {
+      text-decoration: none;
+      display: inline-block;
+      background-color: white;
+      width: 100%;
+      padding: 5px 0;
+    }
+  }
+}
+
+.text-file-section {
+  background-color: $lighttan;
+  padding: 30px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-decoration: none;
+  border-radius: 10px;
+  pre {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+  }
+}
+
+.match {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.no-match {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.cursor {
+  background-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,13 @@
+<main>
+  <h1>Welcome to Typer</h1>
+  <h3>Choose a file</h3>
+  <ul class="file-list">
+    <% @text_files.each do |text_file| %>
+      <li>
+        <a href="<%= text_file_url(text_file) %>">
+          <%= render text_file %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</main>
